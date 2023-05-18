@@ -16,8 +16,6 @@ private:
     sf::RenderWindow window;
 
     Triangle triangle;
-
-	
 };
 
 #endif // APP_HPP

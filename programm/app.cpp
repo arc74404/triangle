@@ -17,10 +17,17 @@ App::run()
         {
             if (event.type == sf::Event::Closed)
             {
-
                 window.close();
             }
+
+            sf::Vector2f cursor_position =
+                sf::Vector2f(sf::Mouse::getPosition(window).x,
+                             sf::Mouse::getPosition(window).y);
+
+            triangle.changeVertexPosition(
+                cursor_position, sf::Mouse::isButtonPressed(sf::Mouse::Left));
         }
+
         window.clear();
 
         triangle.draw(window);

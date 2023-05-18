@@ -4,6 +4,7 @@
     "editor.formatOnType": true,
     "C_Cpp.clang_format_style": "file",
     "files.associations": {
+        "*.txt": "cmake",
         "buon": "cpp",
         "map": "cpp",
         "utility": "cpp",
@@ -96,6 +97,7 @@
         "ranges": "cpp",
         "span": "cpp",
         "*.ipp": "cpp",
-        "resumable": "cpp"
+        "resumable": "cpp",
+        "random": "cpp"
     }
 }
