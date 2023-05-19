@@ -1,11 +1,11 @@
 #ifndef TRIANGLE_HPP
 #define TRIANGLE_HPP
 
-#include <SFML/Graphics.hpp>
-
 #include <algorithm>
 #include <cmath>
 #include <iostream>
+
+#include "myvertex.hpp"
 
 class Triangle
 {
@@ -18,7 +18,12 @@ public:
 
     void changeVertexPosition(sf::Vector2f cursor_position, bool mouse_pressed);
 
+    void setExtraTriangleColor(sf::Color color);
+
+    void setColor(sf::Color color);
+
 private:
+
     enum class Type
     {
         DEFAULT = 0,
@@ -31,15 +36,14 @@ private:
 
     sf::VertexArray extra_triangle;
 
-    sf::VertexArray vertexes;
+    std::vector<MyVertex> vertexes;
 
     sf::VertexArray points;
 
-    int count_points;
-
     const int max_count_points = 15000;
 
-    sf::Vector2f last_point;
+    sf::Vertex last_point;
+
 };
 
 #endif // TRIANGLE_HPP

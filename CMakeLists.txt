@@ -12,7 +12,9 @@ set(SFML_DIR ${SFML_ROOT_DIR}/lib/cmake/SFML)
 
 find_package(SFML 2.5.1 COMPONENTS system window graphics audio REQUIRED)
 
-add_executable(${PROJECT_NAME} programm/main.cpp programm/app.cpp programm/triangle.cpp)
+add_executable(${PROJECT_NAME} 
+programm/main.cpp programm/app.cpp
+programm/triangle.cpp programm/myvertex.cpp)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE sfml-system sfml-window sfml-network sfml-graphics sfml-audio)
 

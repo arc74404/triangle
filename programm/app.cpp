@@ -3,6 +3,8 @@
 App::App()
 {
     window.create(sf::VideoMode(900, 900), "triangle");
+    triangle.setColor(sf::Color(rand() % 255, rand() % 255, rand() % 255));
+    triangle.setExtraTriangleColor(sf::Color(0, 255, 0));
 }
 
 void
